@@ -1,17 +1,20 @@
 {
-  "name": "ts5-obs-overlay",
+  "name": "teamspeak-obs-overlay",
   "private": false,
-  "version": "2.1.1",
-  "description": "Overlay for OBS to show the current talking clients in your TeamSpeak 5 Channel",
+  "version": "2.2.0",
+  "description": "Overlay for OBS to show the current talking clients in your TeamSpeak Channel",
   "author": "DerTyp7",
-  "homepage": "https://dertyp7.github.io/ts5-obs-overlay/#",
+  "homepage": "https://dertyp7.github.io/teamspeak-obs-overlay/#",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DerTyp7/ts5-obs-overlay"
+    "url": "https://github.com/DerTyp7/teamspeak-obs-overlay"
   },
   "keywords": [
     "ts5",
+    "ts6",
+    "teamspeak6",
     "teamspeak",
+    "teamspeak5",
     "overlay",
     "remote app",
     "obs",
@@ -20,7 +23,7 @@
     "vite"
   ],
   "bugs": {
-    "url": "https://github.com/DerTyp7/ts5-obs-overlay/issues"
+    "url": "https://github.com/DerTyp7/teamspeak-obs-overlay/issues"
   },
   "type": "module",
   "scripts": {
@@ -30,24 +33,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/node": "^20.8.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3",
-    "react-ts5-remote-app-api": "^1.1.1",
-    "sass": "^1.68.0"
+    "@types/node": "^22.10.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.3",
+    "react-teamspeak-remote-app-api": "^2.0.0",
+    "sass": "^1.83.4"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.2",
-    "@types/react": "^18.2.35",
-    "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/eslint-plugin": "^6.20.0",
-    "@typescript-eslint/parser": "^6.9.1",
-    "@vitejs/plugin-react-swc": "^3.6.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.2"
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "eslint": "^9.18.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
   }
 }
