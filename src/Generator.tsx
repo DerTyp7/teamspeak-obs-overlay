@@ -9,13 +9,14 @@ export default function Generator() {
 
   const [remoteAppPort, setRemoteAppPort] = useState(5899);
   const [showChannelName, setShowChannelName] = useState(true);
+  const [alignRight, setAlignRight] = useState(false);
   const [hideNonTalking, setHideNonTalking] = useState(false);
   const [clientLimit, setClientLimit] = useState(0);
 
   // Effect to generate URL when dependencies change
   useEffect(() => {
     generateUrl();
-  }, [remoteAppPort, showChannelName, hideNonTalking, clientLimit]);
+  }, [remoteAppPort, showChannelName, hideNonTalking, clientLimit, alignRight]);
 
   // Function to generate the output URL
   function generateUrl() {
@@ -26,6 +27,7 @@ export default function Generator() {
     url.searchParams.set("showChannelName", showChannelName.toString());
     url.searchParams.set("hideNonTalking", hideNonTalking.toString());
     url.searchParams.set("clientLimit", clientLimit.toString());
+    url.searchParams.set("alignRight", alignRight.toString());
 
     // url.hash function always sets the hash to the end of the URL, so we have to replace the question mark with a hash
     // gh-pages needs the hash to be between the base URL and the search params
@@ -62,7 +64,9 @@ export default function Generator() {
         <p>1. Customize your settings</p>
         <p>2. Copy the generated URL</p>
         <p>3. Paste the URL into the BrowserSource URL field in OBS</p>
-        <a href="https://github.com/DerTyp7/ts5-obs-overlay#detailed-instructions">Click here for detailed instructions</a>
+        <a href="https://github.com/DerTyp7/ts5-obs-overlay#detailed-instructions">
+          Click here for detailed instructions
+        </a>
       </div>
 
       {/* Output Section */}
@@ -98,18 +102,34 @@ export default function Generator() {
                 <input type="checkbox" checked={hideNonTalking} />
                 <label>Hide non talking clients</label>
               </div>
+
+              {/* Alignment Option */}
+              <div className="option" onClick={() => setAlignRight(!alignRight)}>
+                <input type="checkbox" checked={alignRight} />
+                <label>Align Right</label>
+              </div>
             </section>
 
             <section>
               {/* Client Limit Option */}
               <div className="option">
-                <input type="number" value={clientLimit} min={0} onChange={(e: ChangeEvent<HTMLInputElement>) => setClientLimit(parseInt(e.target.value))} />
+                <input
+                  type="number"
+                  value={clientLimit}
+                  min={0}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setClientLimit(parseInt(e.target.value))}
+                />
                 <label>Client Limit</label>
               </div>
 
               {/* RemoteApp-Port Option */}
               <div className="option">
-                <input type="number" value={remoteAppPort} min={0} onChange={(e: ChangeEvent<HTMLInputElement>) => setRemoteAppPort(parseInt(e.target.value))} />
+                <input
+                  type="number"
+                  value={remoteAppPort}
+                  min={0}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setRemoteAppPort(parseInt(e.target.value))}
+                />
                 <label>RemoteApp-Port</label>
               </div>
             </section>
@@ -118,7 +138,13 @@ export default function Generator() {
 
         {/* Preview */}
         <div className="preview">
-          <Viewer remoteAppPort={remoteAppPort} showChannelName={showChannelName} hideNonTalking={hideNonTalking} clientLimit={clientLimit} />
+          <Viewer
+            remoteAppPort={remoteAppPort}
+            showChannelName={showChannelName}
+            hideNonTalking={hideNonTalking}
+            clientLimit={clientLimit}
+            alignRight={alignRight}
+          />
         </div>
       </div>
     </div>

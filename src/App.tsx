@@ -17,6 +17,7 @@ export default function App() {
             showChannelName={searchParams.get("showChannelName") === "true"}
             hideNonTalking={searchParams.get("hideNonTalking") === "true"}
             clientLimit={searchParams.get("clientLimit") ? parseInt(searchParams.get("clientLimit") ?? "0") : 0}
+            alignRight={searchParams.get("alignRight") === "true"}
           />
         }
       />
