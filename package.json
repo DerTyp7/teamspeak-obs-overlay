@@ -34,7 +34,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.3",
-    "react-ts5-remote-app-api": "^2.0.0",
+    "react-teamspeak-remote-app-api": "^2.0.0",
     "sass": "^1.83.4"
   },
   "devDependencies": {
