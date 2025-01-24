@@ -1,6 +1,6 @@
 import "@styles/App.scss";
 
-import { Navigate, Route, Routes, useSearchParams } from "react-router-dom";
+import { Route, Routes, useSearchParams } from "react-router-dom";
 import Viewer from "./Viewer";
 import Generator from "./Generator";
 
