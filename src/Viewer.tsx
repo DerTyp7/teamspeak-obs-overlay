@@ -1,5 +1,5 @@
 import "@styles/Viewer.scss";
-import useTSRemoteApp, { IClient } from "react-ts5-remote-app-api";
+import useTSRemoteApp, { IClient } from "react-teamspeak-remote-app-api";
 
 export default function Viewer({
   remoteAppPort = 5899,

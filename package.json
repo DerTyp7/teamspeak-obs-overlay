@@ -1,17 +1,20 @@
 {
-  "name": "ts5-obs-overlay",
+  "name": "teamspeak-obs-overlay",
   "private": false,
   "version": "2.2.0",
-  "description": "Overlay for OBS to show the current talking clients in your TeamSpeak 5 Channel",
+  "description": "Overlay for OBS to show the current talking clients in your TeamSpeak Channel",
   "author": "DerTyp7",
-  "homepage": "https://dertyp7.github.io/ts5-obs-overlay/#",
+  "homepage": "https://dertyp7.github.io/teamspeak-obs-overlay/#",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DerTyp7/ts5-obs-overlay"
+    "url": "https://github.com/DerTyp7/teamspeak-obs-overlay"
   },
   "keywords": [
     "ts5",
+    "ts6",
+    "teamspeak6",
     "teamspeak",
+    "teamspeak5",
     "overlay",
     "remote app",
     "obs",
@@ -20,7 +23,7 @@
     "vite"
   ],
   "bugs": {
-    "url": "https://github.com/DerTyp7/ts5-obs-overlay/issues"
+    "url": "https://github.com/DerTyp7/teamspeak-obs-overlay/issues"
   },
   "type": "module",
   "scripts": {
