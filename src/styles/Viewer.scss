@@ -5,21 +5,22 @@
 .viewer {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
+  padding: 0.3rem;
+  gap: 0.3rem;
 
   &--align-right {
     align-items: flex-end;
   }
 
   h1 {
-    font-size: 5vw;
+    font-size: 4.5rem;
   }
 
   h1,
   p {
     background-color: #2f313680;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    padding: 0.25rem 1.2rem;
+    border-radius: 1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -43,17 +44,9 @@
       flex-direction: row-reverse;
     }
 
-    // icon styles
-    svg {
-      width: 5vw;
-      aspect-ratio: 1/1;
-      margin-right: 0.5rem;
-      filter: drop-shadow(0 0 0.75rem rgba(15, 15, 15, 0.1));
-    }
-
     // client name styles
     p {
-      font-size: 5vw;
+      font-size: 4rem;
     }
   }
 }

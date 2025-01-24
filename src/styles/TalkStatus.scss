@@ -1,0 +1,42 @@
+.talkStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--avatar {
+    margin-right: 4rem;
+
+    svg {
+      width: 6rem !important;
+      margin-left: -9.5rem;
+    }
+  }
+
+  svg {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    margin-right: 0.5rem;
+    filter: drop-shadow(0 0 0.75rem rgba(15, 15, 15, 0.1));
+  }
+}
+
+.avatar {
+  $border-radius: 100rem;
+  $border-width: 0.7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  border: $border-width solid transparent;
+  border-radius: $border-radius;
+
+  img {
+    width: 10rem;
+    border-radius: $border-radius;
+  }
+
+  &--talk {
+    border: $border-width solid rgb(0, 195, 255);
+  }
+}

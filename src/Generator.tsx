@@ -1,6 +1,7 @@
 import { ChangeEvent, useRef, useState, useEffect } from "react";
 import "@styles/Generator.scss";
 import Viewer from "./Viewer";
+import { url } from "inspector";
 
 export default function Generator() {
   // State variables
@@ -12,11 +13,12 @@ export default function Generator() {
   const [alignRight, setAlignRight] = useState(false);
   const [hideNonTalking, setHideNonTalking] = useState(false);
   const [clientLimit, setClientLimit] = useState(0);
+  const [showTsAvatar, setShowTsAvatar] = useState(false);
 
   // Effect to generate URL when dependencies change
   useEffect(() => {
     generateUrl();
-  }, [remoteAppPort, showChannelName, hideNonTalking, clientLimit, alignRight]);
+  }, [remoteAppPort, showChannelName, hideNonTalking, clientLimit, alignRight, showTsAvatar]);
 
   // Function to generate the output URL
   function generateUrl() {
@@ -28,6 +30,7 @@ export default function Generator() {
     url.searchParams.set("hideNonTalking", hideNonTalking.toString());
     url.searchParams.set("clientLimit", clientLimit.toString());
     url.searchParams.set("alignRight", alignRight.toString());
+    url.searchParams.set("showTsAvatar", showTsAvatar.toString());
 
     // url.hash function always sets the hash to the end of the URL, so we have to replace the question mark with a hash
     // gh-pages needs the hash to be between the base URL and the search params
@@ -93,20 +96,26 @@ export default function Generator() {
             <section>
               {/* Show Channel Name Option */}
               <div className="option" onClick={() => setShowChannelName(!showChannelName)}>
-                <input type="checkbox" checked={showChannelName} />
+                <input type="checkbox" defaultChecked={showChannelName} />
                 <label>Show channel name</label>
               </div>
 
               {/* Hide Non-Talking Clients Option */}
               <div className="option" onClick={() => setHideNonTalking(!hideNonTalking)}>
-                <input type="checkbox" checked={hideNonTalking} />
+                <input type="checkbox" defaultChecked={hideNonTalking} />
                 <label>Hide non talking clients</label>
               </div>
 
               {/* Alignment Option */}
               <div className="option" onClick={() => setAlignRight(!alignRight)}>
-                <input type="checkbox" checked={alignRight} />
+                <input type="checkbox" defaultChecked={alignRight} />
                 <label>Align Right</label>
+              </div>
+
+              {/* Show TeamSpeak Avatar */}
+              <div className="option" onClick={() => setShowTsAvatar(!showTsAvatar)}>
+                <input type="checkbox" defaultChecked={showTsAvatar} />
+                <label>Show TeamSpeak Avatar</label>
               </div>
             </section>
 
@@ -138,13 +147,7 @@ export default function Generator() {
 
         {/* Preview */}
         <div className="preview">
-          <Viewer
-            remoteAppPort={remoteAppPort}
-            showChannelName={showChannelName}
-            hideNonTalking={hideNonTalking}
-            clientLimit={clientLimit}
-            alignRight={alignRight}
-          />
+          <iframe src={outputUrl}></iframe>
         </div>
       </div>
     </div>

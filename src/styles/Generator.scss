@@ -202,27 +202,17 @@ $breakpoint-3: 600px;
 
     // Preview styles
     .preview {
+      display: flex;
       flex: 1;
+      background-image: url("/images/viewer_example_background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
       border: 2px solid #31f39973;
 
-      // Viewer styles (see src/styles/Viewer.scss)
-      .viewer {
-        background-image: url("/images/viewer_example_background.png");
-        background-repeat: no-repeat;
-        background-size: cover;
+      iframe {
+        width: 100%;
         min-height: 500px;
-        h1 {
-          font-size: 2rem;
-        }
-        .client {
-          svg {
-            width: 2rem;
-          }
-
-          p {
-            font-size: 2rem;
-          }
-        }
+        border: none;
       }
     }
   }
