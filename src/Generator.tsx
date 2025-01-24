@@ -53,7 +53,7 @@ export default function Generator() {
     <div className="generator">
       {/* Header */}
       <div className="headline">
-        <h1>TS5-OBS-Overlay Generator</h1>
+        <h1>TeamSpeak-OBS-Overlay Generator</h1>
         <h4>by DerTyp7</h4>
       </div>
 
