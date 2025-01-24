@@ -7,6 +7,10 @@
   flex-direction: column;
   padding: 0.5rem;
 
+  &--align-right {
+    align-items: flex-end;
+  }
+
   h1 {
     font-size: 5vw;
   }
@@ -32,9 +36,12 @@
   .client {
     display: flex;
     flex-direction: row;
-    gap: 0 0;
+    gap: 0.5rem 0.5rem;
     align-items: center;
-    margin: 0.5rem 0;
+
+    &--align-right {
+      flex-direction: row-reverse;
+    }
 
     // icon styles
     svg {
