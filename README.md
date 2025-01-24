@@ -1,13 +1,13 @@
-# TeamSpeak5-OBS-Overlay
+# TeamSpeak-OBS-Overlay
 
-This is an overlay for OBS to show the current talking clients in your TeamSpeak5 Channel.  
-This App uses the new "Remote Apps" feature of TeamSpeak5.
+This is an overlay for OBS to show the current talking clients in your TeamSpeak5/6 Channel.  
+This App uses the new "Remote Apps" feature of TeamSpeak5/6.
 
 This overlay uses the [TeamSpeak Remote App API](https://github.com/DerTyp7/react-teamspeak-remote-app-api).
 
 ![image](https://github.com/DerTyp7/ts5-obs-overlay/assets/76851529/d0ab06f2-1a36-479d-826f-bd4bd3d405b7)
 
-- [TeamSpeak5-OBS-Overlay](#teamspeak5-obs-overlay)
+- [TeamSpeak-OBS-Overlay](#teamspeak-obs-overlay)
   - [Usage](#usage)
     - [Quick instructions](#quick-instructions)
     - [Detailed instructions](#detailed-instructions)
@@ -20,16 +20,16 @@ This overlay uses the [TeamSpeak Remote App API](https://github.com/DerTyp7/reac
 
 ### Quick instructions
 
-1. Open this link in your Browser: [https://ts5-overlay.tealfire.de/#/generate](https://ts5-overlay.tealfire.de/#/generate)
+1. Open this link in your Browser: [https://teamspeak-overlay.tealfire.de/#/generate](https://teamspeak-overlay.tealfire.de/#/generate)
 2. Follow the instructions on the website
-3. Accept overlay inside TeamSpeak5  
-   ![image](https://github.com/DerTyp7/ts5-obs-overlay/assets/76851529/aa83b07d-3dea-461f-9487-f9e6a299f2f3)
+3. Accept overlay inside TeamSpeak5/6 
+   ![image](https://github.com/DerTyp7/teamspeak-overlay.tealfire.de/assets/76851529/aa83b07d-3dea-461f-9487-f9e6a299f2f3)
 
 ### Detailed instructions
 
 Try this instruction if you have problems with the quick instructions above.
 
-1. Open this link in your Browser: [https://ts5-overlay.tealfire.de/#/generate](https://ts5-overlay.tealfire.de/#/generate)
+1. Open this link in your Browser: [https://teamspeak-overlay.tealfire.de/#/generate](https://teamspeak-overlay.tealfire.de/#/generate)
 
 2. Follow the instructions on the website
 
@@ -56,7 +56,7 @@ Try this instruction if you have problems with the quick instructions above.
 Make sure you accepted the notification in your TeamSpeak Client.
 
 **Fix 2**  
-Sadly TeamSpeak5 does not give us any information about the current active server tab.  
+Sadly TeamSpeak5/6 does not give us any information about the current active server tab.  
 So we try currently use a workaround, where the active server tab is determined by looking on which server the your hardware input was unmuted the latest, since the non-active server tabs in TS5 usually mute the client’s microphone.
 
 However this workaround is not 100% accurate and can fail in some cases.
@@ -64,7 +64,7 @@ However this workaround is not 100% accurate and can fail in some cases.
 Possible fixes:
 
 - Unmute and mute yourself in the active server tab (Just a normal unmute and mute, not the hardware mute)
-- Reconnect to the TS5 server while the overlay is open
+- Reconnect to the TS5/6 server while the overlay is open
 
 ### OBS doesn't show the latest version of the overlay
 
