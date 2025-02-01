@@ -33,7 +33,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/node": "^22.10.10",
+    "@types/node": "^22.13.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.3",
