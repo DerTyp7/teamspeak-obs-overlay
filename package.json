@@ -35,7 +35,7 @@
   "dependencies": {
     "@types/node": "^22.10.10",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.3.0",
     "react-router-dom": "^7.1.3",
     "react-teamspeak-remote-app-api": "^2.0.0",
     "sass": "^1.83.4"
@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/react-dom": "^19.3.0",
     "@typescript-eslint/eslint-plugin": "^8.21.0",
     "@typescript-eslint/parser": "^8.21.0",
     "@vitejs/plugin-react-swc": "^3.7.2",
